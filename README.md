@@ -8,10 +8,13 @@ Work related project involving large data analysis
 
 First let's import the data which include every agent Name, Id, Line of Work, his level (executive, technician etc.), his status (ground, flight crew, local staff in foreign countries etc.), his service and so on
 
+```
 LOAD CSV WITH HEADERS FROM "file:///ETUDENIVHIERARCHIQUENEO4J.csv" AS csvLine CREATE (person:Person {Matricule: csvLine.Matricule, Nom: csvLine.Nom, Macro_activite: csvLine.Macro_activite, Activite: csvLine.Activite, Niveau_emploi: csvLine.Niveau_emploi, Categorie_salariale: csvLine.Categorie_salariale, Sigle_Service: csvLine.Sigle_Service, Libelle_Service: csvLine.Libelle_Service, Nom_N1: csvLine.Nom_N1})
+```
 
 I have used py2neo librairy to build queries with Python instead of pure Cypher to be able to run complex queries faster. Hereunder is a snippet of the code I've used to create managerial relationship
 
+```python
 from py2neo import authenticate, Graph, Path, Relationship
 authenticate("localhost:7474","neo4j","")
 graph=Grahp()
@@ -24,7 +27,7 @@ for record in cursor :
   graph.create(Relationship(manager, "MANAGER_OF", team))
  except TypeError :
   continue
- 
+ ```
  
 
 - Ops Data science project?
