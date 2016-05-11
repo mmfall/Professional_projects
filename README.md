@@ -3,9 +3,9 @@
 Work related project involving large data analysis
 
 
-### NLP on staff bottom-up ideas within an internal contribution campaign
+### 1.NLP on staff bottom-up ideas within an internal contribution campaign
 
-### Air France Organization analysis in the frame of an organization redesign
+### 2.Air France Organization analysis in the frame of an organization redesign
 
 First let's import the data which include every agent Name, Id, Line of Work, his level (executive, technician etc.), his status (ground, flight crew, local staff in foreign countries etc.), his service and so on
 
@@ -33,4 +33,4 @@ The result can be seen in the following graph :
 ![alt text](/topgraph.png)
 
 
-### Ops Data science project?
+### 3.Ops Data science project?
