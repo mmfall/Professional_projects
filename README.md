@@ -29,7 +29,7 @@ for record in cursor :
   continue
  ```
 The result can be seen in the following graph :
-![alt text](/topgraph.svg)
+![alt text](/topgraph.png)
 
 
 ### Ops Data science project?
