@@ -32,5 +32,11 @@ for record in cursor :
 The result can be seen in the following graph :
 ![alt text](/topgraph.png)
 
+```
+$MATCH (n) WHERE n.Nom_N1="GAGEY FREDERIC" RETURN n
+$MATCH (Person),(CEO {Nom:"GAGEY FREDERIC"}) WHERE (Person)<--(CEO) RETURN Person
+
+MATCH (Person),(CEO {Nom:"GAGEY FREDERIC"}) WHERE (Person)<-[:MANAGER_OF*0..2]-(CEO) RETURN Person
+```
 
 ### 3.Ops Data science project?
