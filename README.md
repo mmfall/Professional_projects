@@ -33,10 +33,22 @@ The result can be seen in the following graph :
 ![alt text](/topgraph.png)
 
 ```
+# Rechercher le CEO
 $MATCH (n) WHERE n.Nom_N1="GAGEY FREDERIC" RETURN n
+# Rechercher les agents directement reliés à CEO
 $MATCH (Person),(CEO {Nom:"GAGEY FREDERIC"}) WHERE (Person)<--(CEO) RETURN Person
-
-MATCH (Person),(CEO {Nom:"GAGEY FREDERIC"}) WHERE (Person)<-[:MANAGER_OF*0..2]-(CEO) RETURN Person
+# Rechercher les agents et liens reliés de 1 à 2 niveaux au CEO (renvoi tout, le CEO compris avec *)
+MATCH (Person),(CEO {Nom:"GAGEY FREDERIC"}) WHERE (Person)<-[:MANAGER_OF*0..2]-(CEO) RETURN *
+# Anomalies : Ruptures de chaîne hierarchiques
+MATCH (Person),(CEO {Nom:"BEGOUGNE DE JUNIAC ALEXANDRE"}) WHERE NOT (Person)<-[:MANAGER_OF*0..10]-(CEO) RETURN Person.Nom
+# Nombre de personnes reliées directement au CEO
+MATCH (Person),(CEO {Nom:"GAGEY FREDERIC"}) WHERE (Person)<-[:MANAGER_OF]-(CEO) RETURN count(*)
+# Nombre de personnes reliées avec 1 intermédiaire au CEO
+MATCH (Person),(CEO {Nom:"GAGEY FREDERIC"}) WHERE (Person)<-[:MANAGER_OF*2..2]-(CEO) RETURN count(*)
+# Nombre de managers rattachés directement au CEO
+MATCH (Person),(CEO {Nom:"GAGEY FREDERIC"}) WHERE (Person)<-[:MANAGER_OF*1..1]-(CEO) AND (Person)-->() RETURN count(*)
+# Manager avec le plus petit nombre de rattachement directement rattaché au CEO
+MATCH (CEO {Nom:"GAGEY FREDERIC"})-[:MANAGER_OF*1..1]->(Person)-[r:MANAGER_OF]->(Team) RETURN collect(Team.Nom_N1)
 ```
 
 ### 3.Ops Data science project?
