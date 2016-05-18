@@ -2,7 +2,6 @@
 --------------------------------------
 Work related project involving large data analysis
 
-
 ### 1.NLP on staff bottom-up ideas within an internal contribution campaign
 
 ### 2.Air France Organization analysis in the frame of an organization redesign
@@ -52,5 +51,8 @@ MATCH (CEO {Nom:"GAGEY FREDERIC"})-[:MANAGER_OF*1..1]->(Person)-[r:MANAGER_OF]->
 # Organisation RH du Cargo
 MATCH (CCO {Nom:"MALKA ALAIN"})-[r:MANAGER_OF*0..10]->(Person {Macro_activite:"RESSOURCES HUMAINES"})-->(Team) RETURN *
 ```
+### 3.Modeling Large Organization complexity using a Model-Based Design approach (w Scilab software)
 
-### 3.Ops Data science project?
+### 4.Bot answering flight safety related comments on company social network
+
+### 5.Ops Data science project?
