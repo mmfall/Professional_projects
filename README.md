@@ -42,12 +42,18 @@ MATCH (Person),(CEO {Nom:"GAGEY FREDERIC"}) WHERE (Person)<-[:MANAGER_OF*0..2]-(
 MATCH (Person),(CEO {Nom:"BEGOUGNE DE JUNIAC ALEXANDRE"}) WHERE NOT (Person)<-[:MANAGER_OF*0..10]-(CEO) RETURN Person.Nom
 # Nombre de personnes reliées directement au CEO
 MATCH (Person),(CEO {Nom:"GAGEY FREDERIC"}) WHERE (Person)<-[:MANAGER_OF]-(CEO) RETURN count(*)
+# Nombre de personnes reliées avec 6 intermédiaires au CEO n'étant pas Personnel Navigant
+MATCH (CEO {Nom:"GAGEY FREDERIC"})-[r:MANAGER_OF*6..6]->(Team) WHERE NOT (Team.Macro_activite="PN") RETURN COUNT(Team)
 # Nombre de personnes reliées avec 1 intermédiaire au CEO
 MATCH (Person),(CEO {Nom:"GAGEY FREDERIC"}) WHERE (Person)<-[:MANAGER_OF*2..2]-(CEO) RETURN count(*)
-# Nombre de managers rattachés directement au CEO
+# Nombre de managers rattachés avec X intermediaire au CEO
 MATCH (Person),(CEO {Nom:"GAGEY FREDERIC"}) WHERE (Person)<-[:MANAGER_OF*1..1]-(CEO) AND (Person)-->() RETURN count(*)
+# Nombre de managers rattachés avec X intermediaires au CEO n'étant pas Personnel Navigant
+MATCH (Person),(CEO {Nom:"GAGEY FREDERIC"}) WHERE (Person)<-[:MANAGER_OF*2..2]-(CEO) AND (Person)-->() AND NOT (Person.Macro_activite="PN") RETURN count(*)
 # Managers avec le plus grand et plus petit nombre de rattachements, directement rattachés au CEO
 MATCH (CEO {Nom:"GAGEY FREDERIC"})-[:MANAGER_OF*1..1]->(Person)-[r:MANAGER_OF]->(Team) RETURN Person, COUNT(r) as rel_count ORDER BY rel_count DESC
+# Nombre de personnes appartenant aux fonctions support rattachées au CEO
+MATCH (CEO {Nom:"GAGEY FREDERIC"})-[r:MANAGER_OF*2..2]->(Team) WHERE (Team.Macro_activite="ACHATS")OR(Team.Macro_activite="AMO")OR(Team.Macro_activite="AUTRES SUPPORTS TRANSVERSES")OR(Team.Macro_activite="COMMUNICATION")OR(Team.Macro_activite="DIGITAL")OR(Team.Macro_activite="FORMATION")OR(Team.Macro_activite="GESTION ET FINANCES")OR(Team.Macro_activite="MEDICAL / SOCIAL")OR(Team.Macro_activite="PAIE & ADMIN. DU PERSONNEL")OR(Team.Macro_activite="RESSOURCES HUMAINES")OR(Team.Macro_activite="SMI")OR(Team.Macro_activite="SUPPORT METIER") RETURN COUNT(Team)
 # Organisation RH du Cargo
 MATCH (CCO {Nom:"MALKA ALAIN"})-[r:MANAGER_OF*0..10]->(Person {Macro_activite:"RESSOURCES HUMAINES"})-->(Team) RETURN *
 ```
