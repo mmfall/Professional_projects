@@ -16,13 +16,13 @@ I have used py2neo librairy to build queries with Python instead of pure Cypher 
 
 ```python
 from py2neo import authenticate, Graph, Path, Relationship
-authenticate("localhost:7474","neo4j","")
-graph=Grahp()
+authenticate("localhost:7474","neo4j","110355")
+graph=Graph()
 cursor=graph.find('Person')
 for record in cursor :
  try:
   team=record
-  manager=graph.find_one('Person','Nom',team["Nom_N1"])
+  manager=graph.find_one('Person','Matricule',team["Matricule_N1"])
   print manager["Nom"],"est le manager de", team["Nom"]
   graph.create(Relationship(manager, "MANAGER_OF", team))
  except TypeError :
