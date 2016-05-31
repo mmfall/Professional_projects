@@ -16,7 +16,7 @@ I have used py2neo librairy to build queries with Python instead of pure Cypher 
 
 ```python
 from py2neo import authenticate, Graph, Path, Relationship
-authenticate("localhost:7474","neo4j","110355")
+authenticate("localhost:7474","neo4j","")
 graph=Graph()
 cursor=graph.find('Person')
 for record in cursor :
