@@ -64,3 +64,7 @@ MATCH (CCO {Nom:"MALKA ALAIN"})-[r:MANAGER_OF*0..10]->(Person {Macro_activite:"R
 ### 4.Bot answering flight safety related comments on company social network
 
 ### 5.Ops Data science project?
+
+### 6.Improve corporate communication by clustering analysis
+
+### 7.Process mining using event logs
