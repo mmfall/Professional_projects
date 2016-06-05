@@ -2,9 +2,9 @@
 --------------------------------------
 Work related project involving large data analysis
 
-### 1.NLP on staff bottom-up ideas within an internal contribution campaign
+### 1.Air France Organization analysis in the frame of an organization redesign
 
-### 2.Air France Organization analysis in the frame of an organization redesign
+Micro-management and silos have been identified as obstacle against efficiency within organizations. Too many managers with too little responsility create control burden and rigidities. The aim of this project is to analyse Air France Group organization and identify opportunities to reduce the number of managers by increasing average span of control and mutualize teams when it makes sense.
 
 First let's import the data which include every agent Name, Id, Line of Work, his level (executive, technician etc.), his status (ground, flight crew, local staff in foreign countries etc.), his service and so on
 
@@ -59,6 +59,8 @@ MATCH (CEO {Nom:"GAGEY FREDERIC"})-[:MANAGER_OF*2..2]->(Team)-[r:MANAGER_OF]->(P
 # Organisation RH du Cargo
 MATCH (CCO {Nom:"MALKA ALAIN"})-[r:MANAGER_OF*0..10]->(Person {Macro_activite:"RESSOURCES HUMAINES"})-->(Team) RETURN *
 ```
+### 2.NLP on staff bottom-up ideas within an internal contribution campaign
+
 ### 3.Modeling Large Organization complexity using a Model-Based Design approach (w Scilab software)
 
 ### 4.Bot answering flight safety related comments on company social network
