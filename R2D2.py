@@ -31,7 +31,7 @@ else:
  kernel.learn("reduction3.safe.aiml")
  kernel.learn("reduction4.safe.aiml")
  kernel.learn("reductions-update.aiml")
-
+ 
  kernel.learn("mp0.aiml")
  kernel.learn("mp1.aiml")
  kernel.learn("mp2.aiml")
@@ -39,8 +39,8 @@ else:
  kernel.learn("mp4.aiml")
  kernel.learn("mp5.aiml")
  kernel.learn("mp6.aiml")
-
-
+ 
+ 
  kernel.learn("ai.aiml")
  kernel.learn("alice.aiml")
  kernel.learn("astrology.aiml")
@@ -92,9 +92,9 @@ else:
  kernel.learn("wallace.aiml")
  kernel.learn("xfind.aiml")
  kernel.learn("update_mccormick.aiml")
-
+ 
  kernel.learn("update1.aiml")
-
+ 
  kernel.saveBrain("AFR2D2.brn")
 
 
