@@ -1,6 +1,7 @@
 import aiml
 import yampy
 import os
+import time
 
 #Authenticate to Yammer
 
@@ -20,9 +21,7 @@ os.chdir("/home/reddowan/Documents/r2d2")
 
 if os.path.isfile("AFR2D2.brn"):
  kernel.bootstrap(brainFile = "AFR2D2.brn")
-
 else:
-
 #load ALICE AIML script, find last version on google. Modify locally to your needs to personalize your bot
  kernel.learn("reduction.names.aiml")
  kernel.learn("reduction0.safe.aiml")
@@ -97,20 +96,23 @@ else:
  
  kernel.saveBrain("AFR2D2.brn")
 
-
+delay=15
 
 while True:
+#timer have been added to avoid Yammer rate exceeds error which end the loop. To be investigated for a more fluid conversation.
+ time.sleep(delay)
 #if someone else than the bot wrote the bot will answer
  if yammer.messages.private(limit=1).messages[0].sender_id!=1562046832 :
+  time.sleep(delay)
   lastmessagesenderid=yammer.messages.private(limit=1).messages[0].sender_id  
+  time.sleep(delay)
   lastmessagecontent=str(yammer.messages.private(limit=1).messages[0].body.plain)
+  time.sleep(delay)
   lastmessageid=yammer.messages.private(limit=1).messages[0].conversation_id
   
   
   lastresponse=kernel.respond(lastmessagecontent)
-
-
+  time.sleep(delay)
   yammer.messages.create(lastresponse,replied_to_id=lastmessageid)
-
-
+  time.sleep(delay)
 
