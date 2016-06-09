@@ -101,7 +101,7 @@ while True:
 #if someone else than the bot wrote the bot will answer
  if yammer.messages.private(limit=1).messages[0].sender_id!=1562046832
   lastmessagesenderid=yammer.messages.private(limit=1).messages[0].sender_id  
-  lastmessagecontent=yammer.messages.private(limit=1).messages[0].body.plain
+  lastmessagecontent=str(yammer.messages.private(limit=1).messages[0].body.plain)
   lastmessageid=yammer.messages.private(limit=1).messages[0].conversation_id
   
   
