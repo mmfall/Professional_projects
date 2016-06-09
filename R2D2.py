@@ -2,14 +2,17 @@ Import aiml, yampy, os
 
 #Authenticate to Yammer
 
-authenticator = yampy.Authenticator(client_id=MY_CLIENT_ID,client_secret=MY_CLIENT_SECRET)
-yammer = yampy.Yammer(access_token=access_token)
+authenticator = yampy.Authenticator(client_id="TkY64m6RwSIF9bujLky7A",client_secret="01LGoxOAgVrVjrevE4FiRmA3DKTZ44FGF7ETuU8Ro")
+yammer = yampy.Yammer(access_token="4006-bzK26lYtX0ILCL6ipBuRg")
 
 # Initiate variable new message to constantly check for new private messages
 lastmessageid=0
 
 # Create the kernel and learn AIML files
 kernel=aiml.Kernel()
+
+# Set working directory
+os.chdir("/home/reddowan/Documents/r2d2")
 
 if os.path.isfile("AFR2D2.brn"):
 kernel.bootstrap(brainFile = "AFR2D2.brn")
