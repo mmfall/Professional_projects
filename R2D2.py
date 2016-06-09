@@ -7,6 +7,7 @@ yammer = yampy.Yammer(access_token="4006-bzK26lYtX0ILCL6ipBuRg")
 
 # Initiate variable new message to constantly check for new private messages
 lastmessageid=0
+lastmessageuserid=0
 
 # Create the kernel and learn AIML files
 kernel=aiml.Kernel()
@@ -19,6 +20,7 @@ kernel.bootstrap(brainFile = "AFR2D2.brn")
 
 else:
 
+#load ALICE AIML script, find last version on google. Modify locally to your needs to personalize your bot
 kernel.learn("reduction.names.aiml")
 kernel.learn("reduction0.safe.aiml")
 kernel.learn("reduction1.safe.aiml")
@@ -95,9 +97,9 @@ kernel.saveBrain("AFR2D2.brn")
 
 
 while True:
-
- if yammer.messages.private(limit=1).message_id!=lastmessage
-  lastmessageuser=yammer.messages.private(limit=1).user_id  
+#if someone else than the bot wrote the bot will answer
+ if yammer.messages.private(limit=1).user_id!=1562046832
+  lastmessageuserid=yammer.messages.private(limit=1).user_id  
   lastmessagecontent=yammer.messages.private(limit=1).message_content
   lastmessageid=yammer.messages.private(limit=1).message_id
   
