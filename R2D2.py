@@ -1,4 +1,6 @@
-Import aiml, yampy, os
+Import aiml
+Import yampy
+Import os
 
 #Authenticate to Yammer
 
