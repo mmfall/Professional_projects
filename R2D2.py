@@ -5,8 +5,8 @@ import time
 
 #Authenticate to Yammer
 
-authenticator = yampy.Authenticator(client_id="TkY64m6RwSIF9bujLky7A",client_secret="01LGoxOAgVrVjrevE4FiRmA3DKTZ44FGF7ETuU8Ro")
-yammer = yampy.Yammer(access_token="4006-bzK26lYtX0ILCL6ipBuRg")
+authenticator = yampy.Authenticator(client_id="TkY64m6RwSIFjLky7A",client_secret="01LGoxOAgVrVjrevE4FiRDKTZ44FGF7ETuU8Ro")
+yammer = yampy.Yammer(access_token="4006-bzK26l0ILCL6ipBuRg")
 
 # Initiate variable new message to constantly check for new private messages
 lastmessageid=0
