@@ -64,6 +64,8 @@ MATCH (CCO {Nom:"MALKA ALAIN"})-[r:MANAGER_OF*0..10]->(Person {Macro_activite:"R
 MATCH (Team:Person) WHERE (Team.Macro_activite="ACHATS")OR(Team.Macro_activite="AMO")OR(Team.Macro_activite="AUTRES SUPPORTS TRANSVERSES")OR(Team.Macro_activite="COMMUNICATION")OR(Team.Macro_activite="DIGITAL")OR(Team.Macro_activite="FORMATION")OR(Team.Macro_activite="GESTION ET FINANCES")OR(Team.Macro_activite="MEDICAL / SOCIAL")OR(Team.Macro_activite="PAIE & ADMIN. DU PERSONNEL")OR(Team.Macro_activite="RESSOURCES HUMAINES")OR(Team.Macro_activite="SMI")OR(Team.Macro_activite="SUPPORT METIER") SET Team:GandA RETURN Team
 #Create label for managers with small teams
 MATCH (Team)-[r:MANAGER_OF]->(Person) WITH Team, COUNT(r) as rel_count WHERE rel_count<4 SET Team:Micromanagers RETURN Team
+#Create labels for manager categories
+MATCH (Team)-[r:MANAGER_OF]->(Person) WITH Team, COUNT(r) as rel_count WHERE rel_count>2 AND rel_count<6 SET Team:trois_cinq RETURN Team
 ```
 ### 2.NLP on staff bottom-up ideas within an internal contribution campaign
 
