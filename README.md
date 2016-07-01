@@ -67,6 +67,15 @@ MATCH (Team)-[r:MANAGER_OF]->(Person) WITH Team, COUNT(r) as rel_count WHERE rel
 #Create labels for manager categories
 MATCH (Team)-[r:MANAGER_OF]->(Person) WITH Team, COUNT(r) as rel_count WHERE rel_count>2 AND rel_count<6 SET Team:trois_cinq RETURN Team
 ```
+After dataviz the following graph shows a gradient between green and red for managers with high span of control and managers with low span of control :
+![alt text](/ecofidataviz.png)
+
+
+### 2.Risk management study for AF Flight safety operations
+Constrained by several regulations and high performance expectations, Air France follows thoroughly each of its operations by the means of reports redacted by field actors, may it be Pilots, Cabin Crew, Cargo or Maintenance operators etc. These post operation reports aim at identifying threats and negative events which can have consequences on AF operations. Today, more than 1200 reports are redacted each months. These reports are then analysed by a few risk assessment departments whose mission are to build risk models, alerts and mitigation processes to embetter our global operations. In the field of flight safety, these reports lead to more than 600 reports each months analysed by 40 flight safety events analysts distributed in our business units and 7 flight safety system analyst working on risk models. The current risk model used is the Bow Tie, encouraged by norm ISO 31000. The following study aims at building an algorithm to identify the mitigation and restoring barriers for each risk scenario which have the higher fault probabilities, meaning an improvement action should be taken on these barriers. Datas have been extracted from SAP in the csv format for one risk scenario. Attention need to be given on : -A barrier can be Applicable or Not applicable (for operational reasons ex:system not available on the aircraft), and for an applicable barrier the barrier can be used or not used (case of several options possible) -Unidentified use of barriers, in the report sometimes an analyst doesn't fill out the use of a barrier for several reasons (he doesn't have the information, or for time reasons he only fills out the applicable barriers, data quality is a known issue being adressed at company level). -Software issues, the report process leave out all the barriers that have never been used so for a new barrier to appear in reports they need to have been used at least once. This creates statistic problems since the number of occurence since first use of a barrier is lost. -Imbalanced dataset, luckily for us event are unfrequent and consequences even less, so the interpretability of fault defaillance tree is questionable when very few occurences have been observed. We aim at compensating this issue with the use of expert opinion.
+[Link to Python Notebook](/Risk_Management_Air_France.ipynb)
+![alt text](/SV.jpg)
+
 ### 2.NLP on staff bottom-up ideas within an internal contribution campaign
 
 ### 3.Modeling Large Organization complexity using a Model-Based Design approach (w Scilab software)
