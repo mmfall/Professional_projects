@@ -71,7 +71,8 @@ Work related project involving large data analysis
  ![alt text](/ecofidataviz.png)		
  		
  		
- ### 2.Risk management study for safety operations		
+ 
+### 2.Risk management study for safety operations		
  The following study aims at building an algorithm based on the Bow Tie risk model (ISO 31000) to identify the mitigation and restoring barriers for each risk scenario which have the higher fault probabilities, meaning an improvement action should be taken on these barriers. Datas have been extracted in csv format. Attention need to be given on : 
  -A barrier can be Applicable or Not applicable and for an applicable barrier the barrier can be used or not used (case of several options possible)     
  -Unidentified use of barriers, in the report sometimes an analyst doesn't fill out the use of a barrier for several reasons (he doesn't have the information, or for time reasons he only fills out the applicable barriers, data quality is a known issue being adressed at organisation level)    
@@ -80,17 +81,17 @@ Work related project involving large data analysis
  [Link to Python Notebook](/Risk_Management.ipynb)		
  ![alt text](/SV.jpg)
 
-### 3.Word tree visualization on staff bottom-up ideas from an internal contribution campaign (and clustering analysis)
+### 3.Traffic prediction
 
-### 4.Improve corporate communication by analysing and predicting audience statistics
+### 4.Word tree visualization on staff bottom-up ideas from an internal contribution campaign (and clustering analysis)
 
-### 5.Modeling Large Organization complexity using a Model-Based Design approach (w Scilab software)
+### 5.Improve corporate communication by analysing and predicting audience statistics
 
-### 6.Bot answering flight safety related comments on company social network
+### 6.Modeling Large Organization complexity using a Model-Based Design approach (w Scilab software)
+
+### 7.Bot answering flight safety related comments on company social network
 This project consists of creating a chatbot using python aiml and yampy libraries to answer flight safety related questions. The objectives was mainly communication purposes to create a buzz on the topic but also to give valuable information within the company on where to report concerns and events related to flight safety. The bot is named R2D2 in relation with the robot in the Star Wars movie sagas (R2D2 is Luke Skywalker copilot during flight combats). [Link to Python script](/R2D2.py)   
 ![alt text](/r2d2post.jpg)
-
-### 7.Ops Data science project
 
 ### 8.Process mining using event logs    
 
