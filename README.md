@@ -78,19 +78,32 @@ Anonymized coding samples of professionnal projects involving data science and m
  -Unidentified use of barriers, in the report sometimes an analyst doesn't fill out the use of a barrier for several reasons (he doesn't have the information, or for time reasons he only fills out the applicable barriers, data quality is a known issue being adressed at organisation level)    
  -Software issues, the report process leave out all the barriers that have never been used so for a new barrier to appear in reports they need to have been used at least once. This creates statistic problems since the number of occurence since first use of a barrier is lost.    
  -Imbalanced dataset, luckily for us event are unfrequent and consequences even less, so the interpretability of fault defaillance tree is questionable when very few occurences have been observed. We aim at compensating this issue with the use of expert opinion.		
- [Link to Python Notebook](/Risk_Management.ipynb)		
- ![alt text](/SV.jpg)
+ [Link to Python Notebook](/Risk_Management.ipynb)
 
 ### 3.Traffic prediction
 
 ### 4.Word tree visualization on staff bottom-up ideas from an internal contribution campaign (and clustering analysis)
 
 ### 5.Improve corporate communication by analysing and predicting audience statistics
+The aim of this project is to predict audience for future articles published in a company internal
+magazine. At the end we want to know which topic and choice of words are going to attract the most viewers. Raw data have been extracted in html form from the company intranet. Articles arepublished on 3
+web media :
+1. L'Accent, which is the official internal magazine
+2. L'Accent Manager, which is a subside from the previous one, but only for the company executives
+3. On Air, which is also a susbide from L'Accent but only with videos and audios
+For each of these media we have the title of the articles, its teaser in a few lines, its publishing date, its theme,
+sometimes its sub theme and finally the numbers of views, and the number of likes which we will try to predict.
+Resume: After extracting the data from raw html documents, we'll build visualizations which shows that any
+model using only the theme of an article to predict its audience will produce unsufficient results since the
+distribution of views for a given theme is widely spread. This conclusion will lead us to a model taking into
+account the words in the title of each articles using the bag of words technique. We'll then see if another
+clustering of the articles based on the bag of words could be a better predictor of its final views than the theme.
+[Link to document](/Communication_study_MMF.pdf)
 
 ### 6.Modeling Large Organization complexity using a Model-Based Design approach (w Scilab software)
 
 ### 7.Bot answering flight safety related comments on company social network
-This project consists of creating a chatbot using python aiml and yampy libraries to answer flight safety related questions. The objectives was mainly communication purposes to create a buzz on the topic but also to give valuable information within the company on where to report concerns and events related to flight safety. The bot is named R2D2 in relation with the robot in the Star Wars movie sagas (R2D2 is Luke Skywalker copilot during flight combats). [Link to Python script](/R2D2.py)   
+This project consists of creating a chatbot on the company social network using python aiml and yampy libraries to answer flight safety related questions. The objectives was mainly communication purposes to create a buzz on the topic but also to give valuable information within the company on where to report concerns and events related to flight safety. The bot is named R2D2 in relation with the robot in the Star Wars movie sagas (R2D2 is Luke Skywalker copilot during flight combats). [Link to Python script](/R2D2.py)   
 ![alt text](/r2d2post.jpg)
 
 ### 8.Process mining using event logs    
