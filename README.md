@@ -68,7 +68,7 @@ Anonymized coding samples of professionnal projects involving data science and m
  MATCH (Team)-[r:MANAGER_OF]->(Person) WITH Team, COUNT(r) as rel_count WHERE rel_count>2 AND rel_count<6 SET Team:trois_cinq RETURN Team		
  ```		
  After dataviz the following graph shows a gradient between green and red for managers with high span of control and managers with low span of control :		
- ![alt text](/ecofidataviz.png)		
+ ![alt text](/graph.jpg)		
  		
  		
  
