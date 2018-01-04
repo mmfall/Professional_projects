@@ -80,8 +80,10 @@ Anonymized coding samples of professionnal projects involving data science and m
  -Imbalanced dataset, luckily for us event are unfrequent and consequences even less, so the interpretability of fault defaillance tree is questionable when very few occurences have been observed. We aim at compensating this issue with the use of expert opinion.		
  [Link to Python Notebook](/Risk_Management.ipynb)
 
-### 3.Traffic prediction
-
+### 3.Traffic prediction (thesis)
+The aim of my thesis was to improve the current algorithm used for flight traffic prediction which has huge implication for staff sizing, operation planning and so on. The first few pages only are available for strategic contextualization. 
+[Link to first pages](/PTRA_thesis.pdf)   
+![alt text](/thesis.png)
 ### 4.Word tree visualization on staff bottom-up ideas from an internal contribution campaign (and clustering analysis)
 
 ### 5.Improve corporate communication by analysing and predicting audience statistics
