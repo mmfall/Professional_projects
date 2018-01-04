@@ -111,3 +111,7 @@ This project consists of creating a chatbot on the company social network using 
 ### 8.Process mining using event logs    
 
 ### 9.Continuing airworthiness survey application using a database   
+
+### 10.Peer feedback Hack
+This project started has a company hack to the traditionnal performance review process. 3 simple questions sent per mail to 10-15 colleagues for peer feedback all in a frame of a personnal improvement. Answers are anonymous. In 1 year 15% of all managers have tryed it, all through word to mouth. The project has since been incorporated into company tools (SAP).
+![alt text](/evaluationentrepairs.jpg)
