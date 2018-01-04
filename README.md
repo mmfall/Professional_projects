@@ -28,8 +28,7 @@ Anonymized coding samples of professionnal projects involving data science and m
   except TypeError :		
    continue		
   ```		
- The result can be seen in the following graph :		
- ![alt text](/topgraph.png)		
+ The result can be seen below.
  		
  ```		
  # Rechercher le CEO		
