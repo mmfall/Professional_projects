@@ -85,7 +85,8 @@ The aim of my thesis was to improve the current algorithm used for flight traffi
 [Link to first pages](/PTRA_thesis.pdf)   
 ![alt text](/thesis.png)
 ### 4.Word tree visualization on staff bottom-up ideas from an internal contribution campaign (and clustering analysis)
-
+This project was built in the frame of a company wide ideation campaign on organization and processes improvements. The aim of this project was to build an engaging vizualisation of the main category of ideas proposed by the personnel and the most reccurent ones to share widely the campaign conclusions. This vizualisation was built using Tableau software.  
+![alt text](/botto;up.jpg)		
 ### 5.Improve corporate communication by analysing and predicting audience statistics
 The aim of this project is to predict audience for future articles published in a company internal
 magazine. At the end we want to know which topic and choice of words are going to attract the most viewers. Raw data have been extracted in html form from the company intranet. Articles arepublished on 3
