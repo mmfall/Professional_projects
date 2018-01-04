@@ -1,10 +1,10 @@
-# Work projects involving data science
+# Professional projects involving data science
 --------------------------------------
-Work related project involving large data analysis
+Anonymized coding samples of professionnal projects involving data science and machine learning
 
-### 1.Organization analysis in the frame of an organization redesign		
+### 1.Organization analysis in the frame of an organization redesign (Workforce Planning)		
   		  
- The aim of this project is to analyse an organization graph and identify opportunities to reduce the number of managers by increasing average span of control and mutualize teams when it makes sense.		
+ The aim of this project is to analyse an organization structure (hierarchical graph, staff skills etc.) and identify opportunities to optimize staff by increasing average span of control and mutualize teams when it makes sense.		
  		
  First let's import the data which include every agent Name, Id, Line of Work, his level (executive, technician etc.), his status (ground, flight crew, local staff in foreign countries etc.), his service and so on		
  		
